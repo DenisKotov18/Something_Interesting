@@ -24,6 +24,7 @@
     <ProjectGuid>{f9a12f00-f998-4883-929a-863754c32039}</ProjectGuid>
     <RootNamespace>зАДданиеподинамическомумассиву</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>ПЗ 8</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
