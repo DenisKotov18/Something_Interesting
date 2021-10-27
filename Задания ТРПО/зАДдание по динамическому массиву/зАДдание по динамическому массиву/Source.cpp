@@ -2,25 +2,7 @@
 #include <ctime>
 #include <cmath>
 using namespace std;
-int check()
-{
-	while (true)
-	{
-		int z;
-		cin >> z;
-		if (std::cin.fail() == 1)
-		{
-			cin.clear();
-			cin.ignore(32767, '\n');
-			std::cout << " Вы ввели некорректное число, попробуйте ещё раз." << endl;
-		}
-		else
-		{
-			cin.ignore(32767, '\n');
-			return z;
-		}
-	}
-}
+int check();
 int main()
 {
 	setlocale(LC_ALL, "RUSSIAN");
@@ -158,5 +140,24 @@ int main()
 		cout << endl << endl;
 		delete[]backup;
 		delete[]arr;
+	}
+}
+int check()
+{
+	while (true)
+	{
+		int z;
+		cin >> z;
+		if (std::cin.fail() == 1)
+		{
+			cin.clear();
+			cin.ignore(32767, '\n');
+			std::cout << " Вы ввели некорректное число, попробуйте ещё раз." << endl;
+		}
+		else
+		{
+			cin.ignore(32767, '\n');
+			return z;
+		}
 	}
 }
