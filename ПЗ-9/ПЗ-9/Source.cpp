@@ -58,8 +58,9 @@ int main()
 		deleteEvenNum(arr, n);
 		findMax(arr, n);
 		deleteRecurringNum(arr, n);
-		showArray(arr, n);
 		countNumRepeat(arr, n);
+		cout << endl << "Контрольный массив" << endl;
+		showArray(arr, n);
 		delete[]arr;
 	}
 }
@@ -242,7 +243,7 @@ void countNumRepeat(int* arr, int n)
 				k--;
 			}
 		}
-		cout << " Число " << arr[i] << " встречается в массиве " << total << " раз" << endl;
+		cout << " Число " << arr[i] << " встречается в массиве " << total << " раз(а)." << endl;
 		if (total > total_max)
 		{
 			mostrepeat = arr[i];
@@ -251,8 +252,7 @@ void countNumRepeat(int* arr, int n)
 		}
 	}
 	cout << endl << endl;
-	cout << " Число " << mostrepeat << " самое распространённое число в массиве. Оно встречается " << max << " раз" << endl;
+	cout << " Число " << mostrepeat << " самое распространённое число в массиве. Оно встречается " << max << " раз(а)." << endl;
 	for (int i = 0; i < backup_n; i++) arr[i] = backup[i];
 	delete[]backup;
-	
 }
