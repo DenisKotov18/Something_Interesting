@@ -90,8 +90,7 @@ void showArray(int* arr,int n)
 void searchForMinMax(int* arr, int n)
 {
 	cout << " Поиск наименьшего и наибольшего элементов массива..." << endl;
-	int max = arr[0];
-	int min = arr[0];
+	int max = arr[0], min = arr[0];
 	for (int i = 1; i < n; i++)
 	{
 		if (arr[i] > max) max = arr[i];
