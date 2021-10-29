@@ -11,6 +11,7 @@ void deleteEvenNum(int*, int);
 void deleteRecurringNum(int*,int);
 void findMax(int*, int);
 void countNumRepeat(int*, int);
+void generateArray(int*, int);
 int main()
 {
 	setlocale(LC_ALL, "RUSSIAN");
@@ -45,13 +46,7 @@ int main()
 			n = check();
 		}
 		int* arr = new int[n];
-		cout << " Введите минимальное число" << endl;
-		int a = check();
-		cout << " Введите максимальное число" << endl;
-		int b = check();
-		cout << " Идёт генерация массива..." << endl;
-		for (int i = 0; i <= (n - 1); i++) arr[i] = rand() % (b - a + 1) + a;
-		showArray(arr, n);
+		generateArray(arr, n);
 		searchForMinMax(arr, n);
 		sortToMax(arr, n);
 		sortToMin(arr, n);
@@ -87,6 +82,16 @@ void showArray(int* arr,int n)
 {
 	for (int i = 0; i < n; i++)	cout << arr[i] << " ";
 	cout << endl << endl;
+}
+void generateArray(int* arr, int n)
+{
+	cout << " Введите минимальное число" << endl;
+	int a = check();
+	cout << " Введите максимальное число" << endl;
+	int b = check();
+	cout << " Идёт генерация массива..." << endl;
+	for (int i = 0; i <= (n - 1); i++) arr[i] = rand() % (b - a + 1) + a;
+	showArray(arr, n);
 }
 void searchForMinMax(int* arr, int n)
 {
@@ -252,7 +257,7 @@ void countNumRepeat(int* arr, int n)
 		}
 	}
 	cout << endl << endl;
-	cout << " Число " << mostrepeat << " самое распространённое число в массиве. Оно встречается " << max << " раз(а)." << endl;
+	cout << " Число " << mostrepeat << " самое распространённое в массиве. Оно встречается " << max << " раз(а)." << endl;
 	for (int i = 0; i < backup_n; i++) arr[i] = backup[i];
 	delete[]backup;
 }
